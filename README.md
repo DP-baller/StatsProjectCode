@@ -1,1 +1,1 @@
-# StatsProjectCode
+This is the code for BE2100 group project
