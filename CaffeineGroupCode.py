@@ -1,13 +1,8 @@
 import pandas as pd
 import numpy as np
+import matplotlib.pyplot as plt
 
-#Create a Dictionary of series
-d = {'Name':pd.Series(['Tom','James','Ricky','Vin','Steve','Smith','Jack',
-   'Lee','David','Gasper','Betina','Andres','James']),
-   'Age':pd.Series([25,26,25,23,30,29,23,34,40,30,51,46, 25]),
-   'Rating':pd.Series([4.23,3.24,3.98,2.56,3.20,4.6,3.8,3.78,2.98,4.80,4.10,3.65, 4])
-}
+y = pd.read_csv('SoftDrink.csv')
 
-#Create a DataFrame
-df = pd.DataFrame(d)
-print(df)
+plt.pie(y['Brand Purchased'].value_counts(), labels =y['Brand Purchased'].unique(), autopct='%1.1f%%')
+plt.show() 
